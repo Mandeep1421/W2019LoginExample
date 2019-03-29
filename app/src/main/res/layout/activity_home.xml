@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@android:color/transparent"
     tools:context=".HomeActivity">
 
     <TextView
@@ -15,11 +15,11 @@
         android:layout_marginBottom="50dp"
         android:focusableInTouchMode="true"
         android:text="Calculator"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/Num1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
@@ -31,8 +31,7 @@
         android:id="@+id/Num2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="120dp"
+        android:layout_below="@+id/Num1"
         android:ems="10"
         android:hint="Enter Number 2"
         android:inputType="number" />
@@ -41,23 +40,28 @@
         android:id="@+id/Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Num2"
+        android:layout_below="@id/Num2"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
         android:hint="Result"
-        android:text="TextView" />
+        android:text="Result"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Num2"
+        android:layout_below="@+id/Result"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
         android:text="Add" />
 
     <Button
         android:id="@+id/sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Num2"
+        android:layout_below="@+id/Result"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/add"
         android:text="Sub" />
 
@@ -65,7 +69,8 @@
         android:id="@+id/mul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Num2"
+        android:layout_below="@+id/Result"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/sub"
         android:text="Mul" />
 
@@ -73,7 +78,7 @@
         android:id="@+id/div"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Num2"
+        android:layout_below="@+id/Result"
         android:layout_toRightOf="@+id/mul"
         android:gravity="center"
         android:text="Div" />
